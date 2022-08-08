@@ -1,0 +1,6 @@
+pandas
+boto3
+dash
+plotly
+dash-labs
+dash-bootstrap-components
