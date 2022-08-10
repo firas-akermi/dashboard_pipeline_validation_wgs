@@ -17,7 +17,7 @@ dash.register_page(
 
 boto3.setup_default_session(profile_name="spim-dev")
 s3client = boto3.client('s3', endpoint_url="http://10.172.104.10:12290")
-s3client.download_file('validation', 'data.csv', './data/data.csv')
+s3client.download_file('spim-dev-validation', 'data.csv', './data/data.csv')
 data = pd.read_csv('./data/data.csv', index_col=False)
 data = data[[
     'Categorie', 'Total.Standard', 'VP.Standard', 'FN.Standard', 'Total.Ech',
@@ -260,8 +260,8 @@ def update_graph(variant_type, version_value, date, env, ref):
     fig.update_yaxes(title="Metrique", type='log')
     #
 
-    dff2 = df[(df['Version'].isin(list(version_value)))
-              & (df['Categorie'] == variant_type)]
+    dff2 = df[(df['Version'].isin(list(version_value))) 
+              & (df['Categorie'] == variant_type) & (df['Reference'] == ref) & (df['Environnement'] == env)] 
     p = pd.DataFrame.from_dict(loss(dff2["Precision"]), orient='index')
     p = p.astype('float')
     p = p.transpose()
