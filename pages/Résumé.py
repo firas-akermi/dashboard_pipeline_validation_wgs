@@ -77,7 +77,8 @@ layout = html.Div(
                          html.Label(['Version de pipeline'],
                                     style={
                                         'font-weight': 'bold',
-                                        "text-align": "center"
+                                        "text-align": "center",
+                                        "margin-left": "30px",
                                     }),
                          dcc.Dropdown(df['Version'].unique(),
                                       'Version pipeline',
@@ -95,9 +96,11 @@ layout = html.Div(
                                   'display': 'inline-block'
                               }),
                      html.Div([
-                         html.Label(['Référence'],
+                         html.Label([html.A('Référence', href='https://www.nature.com/articles/sdata201625/tables/3')],
                                     style={
                                         'font-weight': 'bold',
+                                        "text-align": "center",
+                                        "margin-left": "30px"
                                     }),
                          dcc.Dropdown(df['Reference'].unique(),
                                       'reference',
@@ -118,7 +121,8 @@ layout = html.Div(
                          html.Label(['Environnement'],
                                     style={
                                         'font-weight': 'bold',
-                                        "text-align": "center"
+                                        "text-align": "center",
+                                        "margin-left": "30px"
                                     }),
                          dcc.Dropdown(df['Environnement'].unique(),
                                       'Environnement',
@@ -139,7 +143,8 @@ layout = html.Div(
                          html.Label(['Date de validation'],
                                     style={
                                         'font-weight': 'bold',
-                                        "text-align": "center"
+                                        "text-align": "center",
+                                        "margin-left": "30px"
                                     }),
                          dcc.Dropdown(df['Date'].unique(),
                                       'date',
@@ -207,16 +212,16 @@ layout = html.Div(
             dcc.Graph(id='variant graphique',
                       style={
                           'width': '39%',
-                          'height': '90vh',
+                          'height': '1000px',
                           'display': 'inline-block',
                           "margin-left": "15px"
                       }),
             dcc.Graph(id='comparaison pipeline',
                       style={
-                          'width': '115vh',
-                          'height': '90vh',
+                          'width': '57%',
+                          'height': '1000px',
                           'display': 'inline-block',
-                          "margin-left": "15px"
+                          "margin-left": "20px"
                       })
         ])
     ])
