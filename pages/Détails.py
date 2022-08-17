@@ -46,7 +46,7 @@ layout = html.Div(
                                   'display': 'inline-block'
                               }),
                      html.Div([
-                         html.Label(['Référence'],
+                         html.Label([html.A('Référence', href='https://www.nature.com/articles/sdata201625/tables/3')],
                                     style={
                                         'font-weight': 'bold',
                                     }),
