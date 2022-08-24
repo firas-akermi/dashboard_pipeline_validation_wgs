@@ -14,9 +14,9 @@ import dash
 dash.register_page(
 	__name__,path="/d"	
 )
-boto3.setup_default_session(profile_name="spim-dev")
+boto3.setup_default_session(profile_name="default")
 s3client = boto3.client('s3', endpoint_url="http://10.172.104.10:12290")
-s3client.download_file('spim-dev-validation', 'statistics.csv', './data/statistics.csv')
+s3client.download_file('spim-preprod-validation', 'statistics.csv', './data/statistics.csv')
 data = pd.read_csv('./data/statistics.csv', index_col=False)
 layout = html.Div(
     style={'backgroundColor': '#F5F5F5'},
