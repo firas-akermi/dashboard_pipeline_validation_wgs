@@ -37,13 +37,13 @@ Si plusieurs analyses ont été effectué avec la même version de pipeline à l
 ![capture!](/captures/1.png "Metrics d'une analyse")
 
 
-**Afin de comparer les performances des différentes versions de pipeline vous pouvez choisir plusieurs versions qui sont exécutés avec la même référence et sous le même environnement de calcul. La date peut être ignorée dans ce cas**
+**Afin de comparer les performances des différentes versions de pipeline vous pouvez choisir plusieurs versions qui sont exécutées avec la même référence et sous le même environnement de calcul. La date peut être ignorée dans ce cas**
 
 
 ![capture2!](/captures/2.png "Comparaison pipelines")
 
 
-**Afin de visulaiser les résultats détatillés de l'outils hap.py Navigeur à la page détails et appliquer les filtres**
+**Afin de visulaiser les résultats détaillés de l'outils hap.py Navigeur à la page détails et appliquer les filtres :**
 
 
 ![capture3!](/captures/3.png "details")
