@@ -25,3 +25,13 @@ chmod +x app.py
 ```
 ./app.py
 ```
+## Filtres de dashboard
+
+le dashboard utilise des filtres pour affichier les résultats des analyses:
+**Afin d'affichier des résultats d'un pipeline il faut selectionner une catégorie, une version de pipeline, un environnement et la date de l'analyse.**
+Si plusieurs analyses ont été effectué avec la même version de pipeline à la même date, des histogrammes supporposés s'afficheront: Il est conseillé de différencier les analyses par la référence.
+![capture!](/capture/1.jpg "Metrics d'une analyse")
+**Afin de comparer les performances des différentes versions de pipeline vous pouvez choisir plusieurs versions qui sont exécuté avec la même référence et sous le même environnement la date peuve être ignorée dans ce cas**
+![capture2!](/capture/2.jpg "Comparaison pipelines"))
+**Afin de visulaiser les résultats détatillés de l'outils hap.py Navigeur à la page détails et appliquer les filtres **
+![capture3!](/capture/3.jpg "details"))
